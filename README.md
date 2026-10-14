@@ -81,9 +81,9 @@ Then pick `topview-3d-cli`. The first render downloads a browser component once;
 
 Keep talking to your agent, or open Studio and adjust by hand. When you're happy, turn the 3D scene into a real animated video.
 
-## The problem
+## Why directing AI video feels like gambling
 
-AI video is great until you try to direct it. With text alone, space is hard to describe:
+If you make AI videos, you've probably hit this. Text prompts can't describe space precisely, so you can't control where people stand or where the camera goes:
 
 - 😵 **Blocking is a guess.** "Two people facing each other across a table" comes back side by side, clipping, or without the table.
 - 🎰 **Camera angles are a lottery.** Reverse shots, over-the-shoulder, top-down: you write a paragraph and get one random angle.
@@ -92,7 +92,7 @@ AI video is great until you try to direct it. With text alone, space is hard to 
 - 🧩 **Shots don't match.** In one scene, character positions and space contradict each other from shot to shot.
 - 📐 **Not everyone can storyboard.** No art skills means no way to show the staging in your head.
 
-## The idea
+## What is Topview 3D Builder?
 
 > **Turn space you can't describe into a 3D scene you can see, then into a real video.**
 
@@ -106,7 +106,7 @@ Topview 3D Builder covers the whole path from **an idea, to a 3D scene, to a rea
 An idea  →  Agent builds the 3D scene  →  Auto-check and refine  →  Multi-camera render  →  Real animated video
 ```
 
-## What you get
+## What creators get
 
 - 🎬 **Direct, don't gamble.** You decide blocking, facing, poses, props and cameras. Render several cameras from one scene and the **characters and space stay consistent across every shot**.
 - 🎥 **Design the camera move in advance.** Plan push-ins, pull-backs, rises, orbits and cuts on a timeline. Stretch or shorten a move and the clips after it shift automatically.
