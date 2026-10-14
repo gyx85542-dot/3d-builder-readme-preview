@@ -89,26 +89,20 @@ retime the camera, and render again.
 ## What you can make
 
 <!--
-  EXAMPLES — four pairs, each: docs/assets/examples/<name>-scene.png + <name>-video.gif
-  Left: the 3D blocking in Studio (1200×675 PNG). Right: the AI video made from it (600 px GIF, 3–5 s, ≤ 4 MB).
-  Same camera angle on both sides so the match is obvious.
+  EXAMPLES — left is the 3D blocking, right is the generated shot.
+  GitHub only plays a user-attachments URL, so these cells use those URLs.
 -->
 <table>
   <tr>
-    <td width="50%" align="center"><img src="docs/assets/examples/dialogue-scene.png" alt="Two-person dialogue, 3D blocking" width="100%"><br><b>Dialogue</b> · over-the-shoulder coverage</td>
-    <td width="50%" align="center"><img src="docs/assets/examples/dialogue-video.gif" alt="Two-person dialogue, generated video" width="100%"><br>The generated shot</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/5a12c45a-a5d0-4fe8-a5d9-40689fd62988" width="100%" controls muted playsinline></video><br><b>Coffee</b> · blocking the pour</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/d20f2c9a-8fc2-45c7-b7cc-249a4a6b1e8c" width="100%" controls muted playsinline></video><br>The generated shot</td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="docs/assets/examples/product-scene.png" alt="Product on a table, 3D blocking" width="100%"><br><b>Product</b> · orbit around an object</td>
-    <td width="50%" align="center"><img src="docs/assets/examples/product-video.gif" alt="Product orbit, generated video" width="100%"><br>The generated shot</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/a49d606b-b480-4846-a60c-59044c93c1f7" width="100%" controls muted playsinline></video><br><b>Basketball</b> · a shot at the hoop</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/6a3afbde-32f2-4274-8f25-c7f8b93bcca5" width="100%" controls muted playsinline></video><br>The generated shot</td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="docs/assets/examples/action-scene.png" alt="Running figure, 3D blocking" width="100%"><br><b>Movement</b> · tracking a character</td>
-    <td width="50%" align="center"><img src="docs/assets/examples/action-video.gif" alt="Tracking shot, generated video" width="100%"><br>The generated shot</td>
-  </tr>
-  <tr>
-    <td width="50%" align="center"><img src="docs/assets/examples/establishing-scene.png" alt="Wide room, 3D blocking" width="100%"><br><b>Establishing</b> · slow zoom out</td>
-    <td width="50%" align="center"><img src="docs/assets/examples/establishing-video.gif" alt="Zoom out, generated video" width="100%"><br>The generated shot</td>
+    <td colspan="2" align="center"><video src="https://github.com/user-attachments/assets/8db00ea9-9b6b-414e-a76b-9b92761504f6" width="50%" controls muted playsinline></video><br><b>Bicycle</b> · the generated shot</td>
   </tr>
 </table>
 
