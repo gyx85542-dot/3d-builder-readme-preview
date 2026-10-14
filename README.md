@@ -31,11 +31,9 @@
       16–22s render: reference frames / contact sheet appear, last second cuts to the final AI video
     Size: record at 1600×1000, show at 800 px wide. Dark theme, slowed cursor.
     Length: 18–25 s, seamless loop. MP4 (H.264) ≤ 10 MB; GIF ≤ 10 MB, 15 fps.
-    GitHub tip: drag the MP4 into an issue to get a user-attachments URL that plays inline.
+    GitHub strips relative <video> tags. Inline playback needs a user-attachments URL.
   -->
-  <video src="docs/assets/hero.mp4" width="800" autoplay loop muted playsinline controls>
-    <a href="docs/assets/hero.mp4">Watch the demo video</a>
-  </video>
+  <video src="https://github.com/user-attachments/assets/5b07a0d4-d3cc-48c0-aebf-31e2232d90de" width="800" autoplay loop muted playsinline controls></video>
 </p>
 
 Topview 3D Builder is a 3D director's stage that runs on your machine. You, or
