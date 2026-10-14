@@ -17,6 +17,68 @@ https://github.com/user-attachments/assets/5b07a0d4-d3cc-48c0-aebf-31e2232d90de
 
 <p align="center"><sub>↑ 在 Studio 里搭场景、摆机位、拉运镜，再到成片，一气呵成</sub></p>
 
+## 🚀 快速上手
+
+### 第 1 步：安装插件
+
+选择你正在用的 AI 工具。需要 Python 3.11+、Node.js 20.6+，以及 [uv](https://docs.astral.sh/uv/) 或 pipx（任选其一）。
+
+<p>
+  <a href="#chatgpt--codex"><img src="https://cdn.simpleicons.org/openai/412991" alt="ChatGPT" height="22" align="center" /> <b>ChatGPT / Codex</b></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#cursor"><img src="https://cdn.simpleicons.org/cursor/808080" alt="Cursor" height="22" align="center" /> <b>Cursor</b></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#claude-code"><img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude" height="22" align="center" /> <b>Claude Code</b></a>
+</p>
+
+#### ChatGPT / Codex
+
+ChatGPT 桌面端与 Codex 共用同一份配置，装一次即可，安装后重启应用。
+
+```bash
+codex plugin marketplace add https://github.com/topviewai/topview-3d-builder.git --ref main
+codex plugin add topview-3d-builder@topview-3d-builder
+```
+
+#### Cursor
+
+```bash
+git clone https://github.com/topviewai/topview-3d-builder.git ~/.cursor/plugins/local/topview-3d-builder
+```
+
+重启 Cursor 生效。
+
+#### Claude Code
+
+```bash
+claude plugin marketplace add https://github.com/topviewai/topview-3d-builder.git
+claude plugin install topview-3d-builder@topview-3d-builder
+```
+
+安装后重启 Claude Code。
+
+<details>
+<summary>其他支持 Skills 的工具</summary>
+
+```bash
+npx skills add https://github.com/topviewai/topview-3d-builder.git
+```
+
+然后选择 `topview-3d-cli`。
+
+</details>
+
+> 首次渲染会自动下载一次渲染所需的浏览器组件（约几百 MB），之后无需重复下载。
+> 更新、卸载、手动安装 CLI 等进阶操作，请见 [开发者与进阶文档](DEVELOPER.md)。
+
+### 第 2 步：开一个新会话，直接说你想要的场景
+
+> "搭一个场景：一个角色坐在盒子旁边，渲染一张正面视角。"
+
+### 第 3 步：查看场景，继续调整
+
+需要调整就继续说，或者打开 Studio 手动微调。满意之后，以这个 3D 场景为依据，输出真实质感的动画视频。
+
 ## 你是不是也遇到过这些问题？
 
 用 AI 生成视频，最让创作者崩溃的往往不是画质，而是**"它根本不听我的"**：
@@ -136,25 +198,6 @@ https://github.com/user-attachments/assets/5b07a0d4-d3cc-48c0-aebf-31e2232d90de
 - **电商 / 营销运营**：批量产出人物与产品关系稳定的场景素材
 - **教育、动画、游戏预演**：快速验证一场戏该怎么拍
 
-## 3 步上手
-
-**1. 安装插件**（选你正在用的工具，详细命令见下方"安装"）
-
-<p>
-  <a href="#chatgptcodex-app--codex-cli"><img src="https://cdn.simpleicons.org/openai/412991" alt="ChatGPT" height="22" align="center" /> <b>ChatGPT / Codex</b></a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#cursor"><img src="https://cdn.simpleicons.org/cursor/808080" alt="Cursor" height="22" align="center" /> <b>Cursor</b></a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#claude-code"><img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude" height="22" align="center" /> <b>Claude Code</b></a>
-</p>
-
-**2. 开一个新会话，直接说你想要的场景**
-
-> "搭一个场景：一个角色坐在盒子旁边，渲染一张正面视角。"
-
-**3. 查看场景，需要调整就继续说，或者打开 Studio 手动微调**
-
-满意之后，以这个 3D 场景为依据，输出真实质感的动画视频。
 
 ## 目前能做什么，不能做什么
 
@@ -168,47 +211,6 @@ https://github.com/user-attachments/assets/5b07a0d4-d3cc-48c0-aebf-31e2232d90de
 
 > 3D 场景是"画面骨架"，用来约束视频模型的调度，最终的真实质感由视频生成阶段完成。
 
-## 安装
-
-### 前置条件
-- Python 3.11+、Node.js 20.6+
-- [uv](https://docs.astral.sh/uv/) 或 pipx（任选其一）
-
-### ChatGPT（Codex App）/ Codex CLI
-
-```bash
-codex plugin marketplace add https://github.com/topviewai/topview-3d-builder.git --ref main
-codex plugin add topview-3d-builder@topview-3d-builder
-```
-
-安装后重启应用。ChatGPT 桌面端与 Codex 共用同一份配置，装一次即可。
-
-### Cursor
-
-```bash
-git clone https://github.com/topviewai/topview-3d-builder.git ~/.cursor/plugins/local/topview-3d-builder
-```
-
-重启 Cursor 生效。
-
-### Claude Code
-
-```bash
-claude plugin marketplace add https://github.com/topviewai/topview-3d-builder.git
-claude plugin install topview-3d-builder@topview-3d-builder
-```
-
-安装后重启 Claude Code。
-
-### 其他支持 Skills 的工具
-
-```bash
-npx skills add https://github.com/topviewai/topview-3d-builder.git
-```
-然后选择 `topview-3d-cli`。
-
-> 首次渲染会自动下载一次渲染所需的浏览器组件（约几百 MB），之后无需重复下载。
-> 更新、卸载、手动安装 CLI 等进阶操作，请见 [开发者与进阶文档](DEVELOPER.md)。
 
 ## 常见问题
 
