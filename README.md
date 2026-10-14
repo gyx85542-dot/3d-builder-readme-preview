@@ -129,21 +129,21 @@ Left is the 3D scene you build. Right is the video generated from it: **the way 
     <td align="center"><video src="https://github.com/user-attachments/assets/3365923a-a8b4-4c78-aeaa-2d32b6c22320" width="100%" controls muted playsinline></video></td>
   </tr>
   <tr>
-    <td colspan="2"><b>🐉 Establishing shot, follow the flight:</b> A rider flies a dragon over a castle. The camera starts just behind and above them, looking forward over the wings at the towers. Over eight seconds it follows the flight as the dragon clears the castle and heads out over the hills.</td>
+    <td colspan="2"><b>prompt：</b> A rider flies a dragon over a castle. The camera starts just behind and above them, looking forward over the wings at the towers. Over eight seconds it follows the flight as the dragon clears the castle and heads out over the hills.</td>
   </tr>
   <tr>
     <td align="center"><video src="https://github.com/user-attachments/assets/5a12c45a-a5d0-4fe8-a5d9-40689fd62988" width="100%" controls muted playsinline></video></td>
     <td align="center"><video src="https://github.com/user-attachments/assets/d20f2c9a-8fc2-45c7-b7cc-249a4a6b1e8c" width="100%" controls muted playsinline></video></td>
   </tr>
   <tr>
-    <td colspan="2"><b>☕ Product shot, push in and rise:</b> One person pours from a pitcher into a cup on a café counter. The camera starts wide across the counter, then pushes in and rises to a top-down close-up of the pour over eight seconds.</td>
+    <td colspan="2"><b>prompt：</b> One person pours from a pitcher into a cup on a café counter. The camera starts wide across the counter, then pushes in and rises to a top-down close-up of the pour over eight seconds.</td>
   </tr>
   <tr>
     <td align="center"><video src="https://github.com/user-attachments/assets/a49d606b-b480-4846-a60c-59044c93c1f7" width="100%" controls muted playsinline></video></td>
     <td align="center"><video src="https://github.com/user-attachments/assets/6a3afbde-32f2-4274-8f25-c7f8b93bcca5" width="100%" controls muted playsinline></video></td>
   </tr>
   <tr>
-    <td colspan="2"><b>🏀 Sports, jump shot:</b> A player jumps and shoots at a hoop. The camera starts low beside them, then rises and pushes in toward the basket, finishing above the rim and looking down over eight seconds.</td>
+    <td colspan="2"><b>prompt：</b> A player jumps and shoots at a hoop. The camera starts low beside them, then rises and pushes in toward the basket, finishing above the rim and looking down over eight seconds.</td>
   </tr>
 </table>
 
@@ -160,7 +160,7 @@ Left is the 3D scene you build. Right is the video generated from it: **the way 
     <td align="center"><video src="https://github.com/user-attachments/assets/8db00ea9-9b6b-414e-a76b-9b92761504f6" width="100%" controls muted playsinline></video></td>
   </tr>
   <tr>
-    <td colspan="2"><b>🚴 Street, tracking shot:</b> A person rides a bicycle along a city street. The camera starts level and tracks alongside, then rises and pulls back to a high angle looking down the street over eight seconds.</td>
+    <td colspan="2"><b>prompt：</b> A person rides a bicycle along a city street. The camera starts level and tracks alongside, then rises and pulls back to a high angle looking down the street over eight seconds.</td>
   </tr>
 </table>
 
