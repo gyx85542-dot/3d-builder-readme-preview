@@ -69,7 +69,7 @@ claude plugin install topview-3d-builder@topview-3d-builder
 npx skills add https://github.com/topviewai/topview-3d-builder.git
 ```
 
-Then pick `topview-3d-cli`. The first render downloads a browser component once; after that it is cached. For updates, uninstalling and manual setup, see the [developer docs](DEVELOPER.md).
+Then pick `topview-3d-cli`. The first render downloads a browser component once; after that it is cached. For the CLI and project format, see the [CLI reference](https://github.com/topviewai/topview-3d-builder/blob/main/docs/topview-3d-cli.md).
 
 </details>
 
@@ -223,7 +223,7 @@ Yes. It covers the whole path from an idea, to a 3D scene, to a real animated vi
 | 🌐 **Topview.ai** | [www.topview.ai](https://www.topview.ai) |
 | 🎬 **3D Builder home** | [www.topview.ai/3d-builder](https://www.topview.ai/3d-builder) |
 | 🎓 **3D Builder tutorial** | [Build scenes, stage action and move the camera](https://www.topview.ai/academy/spatial-control#3-1-3d-builder-build-scenes-stage-action-and-move-the-camera) |
-| 🛠 **Developer docs** | [DEVELOPER.md](DEVELOPER.md) (CLI, project format, releases, contributing) |
+| 🛠 **CLI reference** | [CLI and project format](https://github.com/topviewai/topview-3d-builder/blob/main/docs/topview-3d-cli.md) |
 | 🐞 **Feedback and bugs** | [GitHub Issues](https://github.com/topviewai/topview-3d-builder/issues) |
 
 If Topview 3D Builder helps your work, **give the repo a ⭐** and share what you make. We'd love to see it.
