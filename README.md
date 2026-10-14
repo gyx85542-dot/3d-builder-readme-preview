@@ -102,7 +102,8 @@ retime the camera, and render again.
     <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/6a3afbde-32f2-4274-8f25-c7f8b93bcca5" width="100%" controls muted playsinline></video><br>The generated shot</td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><video src="https://github.com/user-attachments/assets/8db00ea9-9b6b-414e-a76b-9b92761504f6" width="50%" controls muted playsinline></video><br><b>Bicycle</b> · the generated shot</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/3616a492-1961-4760-ab3e-259c603b292c" width="100%" controls muted playsinline></video><br><b>Bicycle</b> · riding down the street</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/8db00ea9-9b6b-414e-a76b-9b92761504f6" width="100%" controls muted playsinline></video><br>The generated shot</td>
   </tr>
 </table>
 
