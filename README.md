@@ -23,13 +23,7 @@ https://github.com/user-attachments/assets/5b07a0d4-d3cc-48c0-aebf-31e2232d90de
 
 选择你正在用的 AI 工具。需要 Python 3.11+、Node.js 20.6+，以及 [uv](https://docs.astral.sh/uv/) 或 pipx（任选其一）。
 
-<p>
-  <a href="#chatgpt--codex"><img src="https://cdn.simpleicons.org/openai/412991" alt="ChatGPT" height="22" align="center" /> <b>ChatGPT / Codex</b></a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#cursor"><img src="https://cdn.simpleicons.org/cursor/808080" alt="Cursor" height="22" align="center" /> <b>Cursor</b></a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#claude-code"><img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude" height="22" align="center" /> <b>Claude Code</b></a>
-</p>
+ChatGPT / Codex · Cursor · Claude Code
 
 #### ChatGPT / Codex
 
