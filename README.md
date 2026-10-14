@@ -94,6 +94,10 @@ retime the camera, and render again.
 -->
 <table>
   <tr>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/f304c401-a009-470c-ba7b-1fba10ea3a14" width="100%" controls muted playsinline></video><br>prompt：A rider flies a dragon over a castle. The camera starts just behind and above them, looking forward over the wings at the towers. Over eight seconds it follows the flight as the dragon clears the castle and heads out over the hills.</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/3365923a-a8b4-4c78-aeaa-2d32b6c22320" width="100%" controls muted playsinline></video><br>The generated shot</td>
+  </tr>
+  <tr>
     <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/5a12c45a-a5d0-4fe8-a5d9-40689fd62988" width="100%" controls muted playsinline></video><br>prompt：One person pours from a pitcher into a cup on a café counter. The camera starts wide across the counter, then pushes in and rises to a top-down close-up of the pour over eight seconds.</td>
     <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/d20f2c9a-8fc2-45c7-b7cc-249a4a6b1e8c" width="100%" controls muted playsinline></video><br>The generated shot</td>
   </tr>
