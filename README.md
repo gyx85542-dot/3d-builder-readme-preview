@@ -94,15 +94,15 @@ retime the camera, and render again.
 -->
 <table>
   <tr>
-    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/5a12c45a-a5d0-4fe8-a5d9-40689fd62988" width="100%" controls muted playsinline></video><br>prompt：Build a café counter. One person stands behind it and pours from a pitcher into a cup. Put the camera across the counter, close on the pour, and hold for eight seconds.</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/5a12c45a-a5d0-4fe8-a5d9-40689fd62988" width="100%" controls muted playsinline></video><br>prompt：One person pours from a pitcher into a cup on a café counter. The camera starts wide across the counter, then pushes in and rises to a top-down close-up of the pour over eight seconds.</td>
     <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/d20f2c9a-8fc2-45c7-b7cc-249a4a6b1e8c" width="100%" controls muted playsinline></video><br>The generated shot</td>
   </tr>
   <tr>
-    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/a49d606b-b480-4846-a60c-59044c93c1f7" width="100%" controls muted playsinline></video><br>prompt：Put a basketball hoop at the end of a court. A player jumps and reaches the ball up toward the rim. Place the camera low and to the side so the player and the hoop both stay in frame, and hold for eight seconds.</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/a49d606b-b480-4846-a60c-59044c93c1f7" width="100%" controls muted playsinline></video><br>prompt：A player jumps and shoots at a hoop. The camera starts low beside them, then rises and pushes in toward the basket, finishing above the rim and looking down over eight seconds.</td>
     <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/6a3afbde-32f2-4274-8f25-c7f8b93bcca5" width="100%" controls muted playsinline></video><br>The generated shot</td>
   </tr>
   <tr>
-    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/3616a492-1961-4760-ab3e-259c603b292c" width="100%" controls muted playsinline></video><br>prompt：A person rides a bicycle down a city street, with buildings and trees on either side. Place the camera level with the rider and track alongside them for eight seconds.</td>
+    <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/3616a492-1961-4760-ab3e-259c603b292c" width="100%" controls muted playsinline></video><br>prompt：A person rides a bicycle along a city street. The camera starts level and tracks alongside, then rises and pulls back to a high angle looking down the street over eight seconds.</td>
     <td width="50%" align="center"><video src="https://github.com/user-attachments/assets/8db00ea9-9b6b-414e-a76b-9b92761504f6" width="100%" controls muted playsinline></video><br>The generated shot</td>
   </tr>
 </table>
