@@ -20,21 +20,12 @@
   <a href="https://www.topview.ai/3d-builder">Website</a>
 </p>
 
-<p align="center">
-  <!--
-    HERO — docs/assets/hero.mp4 (main) + docs/assets/hero.gif (fallback)
-    What: one continuous take of the local Studio, no terminal.
-      0–5s   build the set: drag a character and a table in, apply a seated pose
-      5–10s  place the camera: add a camera, switch the viewport to it, nudge the framing
-      10–16s direct the move: drop a "push in" move on the timeline, drag its length,
-             the clips after it slide along; scrub the playhead
-      16–22s render: reference frames / contact sheet appear, last second cuts to the final AI video
-    Size: record at 1600×1000, show at 800 px wide. Dark theme, slowed cursor.
-    Length: 18–25 s, seamless loop. MP4 (H.264) ≤ 10 MB; GIF ≤ 10 MB, 15 fps.
-    GitHub strips relative <video> tags. Inline playback needs a user-attachments URL.
-  -->
-  <video src="https://github.com/user-attachments/assets/5b07a0d4-d3cc-48c0-aebf-31e2232d90de" width="800" autoplay loop muted playsinline controls></video>
-</p>
+<!--
+  HERO — docs/assets/hero.mp4 (main) + docs/assets/hero.gif (fallback)
+  GitHub only plays a user-attachments URL when that URL is its own paragraph.
+-->
+
+https://github.com/user-attachments/assets/5b07a0d4-d3cc-48c0-aebf-31e2232d90de
 
 Topview 3D Builder is a 3D director's stage that runs on your machine. You, or
 your coding agent, place characters, poses, props and cameras, plan the camera
