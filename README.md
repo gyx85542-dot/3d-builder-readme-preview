@@ -7,7 +7,7 @@
 <p align="center"><b>Stop prompting. Start directing.</b></p>
 
 <p align="center">
-  From an idea, to a 3D scene, to a real animated video. Free, runs locally, no sign-up.
+  From an idea, to a 3D scene built by your agent, to a real animated video. Free, runs locally, no sign-up.
 </p>
 
 <p align="center">
