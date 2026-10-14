@@ -178,6 +178,7 @@ Left is the 3D scene you build. Right is the video generated from it: **the way 
 - **Direct, don't gamble.** Composition, eyelines and camera paths are decided before the video model runs.
 - **Edit, don't regenerate.** The scene is a file, not a prompt. Move one prop and render again.
 - **Checked before you render.** Framing, grounding, spacing and collisions are measured automatically, so mistakes surface early.
+- **A full 3D editor, not just an agent.** Many code-driven 3D scene tools can only be changed through an agent. Topview 3D Builder ships a complete 3D software interface, Studio, and everything your agent can do has a matching panel you can use by hand.
 - **Agent-native.** Works in ChatGPT / Codex, Cursor and Claude Code. You talk, your agent builds.
 - **Local by default.** Building and rendering need no account and upload nothing.
 - **Open source.** Code under Apache 2.0, built-in assets under CC BY 4.0.
