@@ -4,7 +4,7 @@
 
 <h1 align="center">Topview 3D Builder</h1>
 
-<p align="center"><b>Block it in 3D. Let AI shoot it.</b></p>
+<p align="center"><b>Stop prompting. Start directing.</b></p>
 
 <p align="center">
   From an idea, to a 3D scene, to a real animated video. Free, runs locally, no sign-up.
