@@ -31,7 +31,7 @@ you to sign in to Topview. Install the CLI from PyPI as `topview-3d-cli`.
   `set_version.py`, `package-codex-plugin.mjs` and `wheel_smoke.py`.
 - `.codex-plugin/`, `.claude-plugin/`, `.cursor-plugin/`, `.agents/plugins/` — plugin manifests;
   `assets/` — the plugin logo and icon. `.github/workflows/` — CI and the PyPI / TestPyPI release.
-- `docs/` — [the CLI contract](docs/topview-3d-cli.md) and the migration plan.
+- `docs/` — [the CLI contract](https://github.com/topviewai/topview-3d-builder/blob/main/docs/topview-3d-cli.md) and the migration plan.
 
 The current transition keeps Python 3.11 for document and operation logic. Node
 and Playwright remain the rendering runtime. Docker is not part of the local
@@ -204,7 +204,7 @@ with a single `topview-3d-builder/` root folder holding `.codex-plugin/`, `.mcp.
 in `assets/` and `skills/`. It fails with a named reason when the manifest version is not semver,
 the manifest declares apps or does not point `mcpServers` at `./.mcp.json`, `.mcp.json` is missing,
 an image is missing or not a square 48–4096 px PNG
-of at most 5 MiB (see [assets/README.md](assets/README.md)), a skill directory is nested, hidden
+of at most 5 MiB (see [assets/README.md](https://github.com/topviewai/topview-3d-builder/blob/main/assets/README.md)), a skill directory is nested, hidden
 or has an over-long name or description, a file is a symlink or over 100 MiB, or the archive
 exceeds 100 MB.
 
@@ -316,7 +316,7 @@ topview-3d-cli renders show my-scene                # path of the latest contact
 
 Every command prints one JSON object (plain `topview-3d-cli doctor` prints a readable report; use
 `topview-3d-cli doctor --json` for JSON, which always exits 0 and reports readiness in `ok`). Exit code 0 means success, 2 means invalid input, and 1 means
-execution failed. See [docs/topview-3d-cli.md](docs/topview-3d-cli.md) for commands, the project format, and
+execution failed. See [docs/topview-3d-cli.md](https://github.com/topviewai/topview-3d-builder/blob/main/docs/topview-3d-cli.md) for commands, the project format, and
 error codes.
 
 Tests:
@@ -332,13 +332,13 @@ pnpm -C editor --filter @topview/3d-director-cli test
 ## For contributors
 
 The CLI contract and the `.topview-3d/` project format are documented in
-[docs/topview-3d-cli.md](docs/topview-3d-cli.md). Read that before changing either one.
+[docs/topview-3d-cli.md](https://github.com/topviewai/topview-3d-builder/blob/main/docs/topview-3d-cli.md). Read that before changing either one.
 
 ## License
 
-- Code, schemas, and documentation: Apache License 2.0 ([LICENSE](LICENSE), [NOTICE](NOTICE)).
+- Code, schemas, and documentation: Apache License 2.0 ([LICENSE](https://github.com/topviewai/topview-3d-builder/blob/main/LICENSE), [NOTICE](https://github.com/topviewai/topview-3d-builder/blob/main/NOTICE)).
 - Built-in assets in `builtin-assets/` (character models, poses, pose covers, asset manifest):
-  [CC BY 4.0](builtin-assets/LICENSE). Attribution: "Scene3D built-in assets © Topview, CC BY 4.0"
-  (scope in [builtin-assets/NOTICE](builtin-assets/NOTICE)).
+  [CC BY 4.0](https://github.com/topviewai/topview-3d-builder/blob/main/builtin-assets/LICENSE). Attribution: "Scene3D built-in assets © Topview, CC BY 4.0"
+  (scope in [builtin-assets/NOTICE](https://github.com/topviewai/topview-3d-builder/blob/main/builtin-assets/NOTICE)).
 
 The wheel declares `Apache-2.0 AND CC-BY-4.0` and ships both licence texts.

@@ -4,229 +4,225 @@
 
 <h1 align="center">Topview 3D Builder</h1>
 
-<p align="center"><b>先搭好场景，再让 AI 来拍。</b><br/>Block it in 3D. Let AI shoot it.</p>
+<p align="center"><b>Block it in 3D. Let AI shoot it.</b></p>
 
 <p align="center">
-  让 AI 视频里的人物站位、镜头角度、空间关系，从"抽卡"变成"导演说了算"。<br/>
-  从一个想法，到 3D 场景，再到真实的动画视频，全流程一站打通。免费、本地运行、无需注册。
+  From an idea, to a 3D scene, to a real animated video. Free, runs locally, no sign-up.
 </p>
 
----
+<p align="center">
+  <a href="https://github.com/topviewai/topview-3d-builder/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License: Apache 2.0"></a>
+  <a href="https://www.python.org"><img src="https://img.shields.io/badge/python-%3E%3D3.11-3776AB" alt="Python 3.11+"></a>
+  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D20.6-brightgreen" alt="Node.js 20.6+"></a>
+  <img src="https://img.shields.io/badge/runs-100%25%20local-success" alt="Runs 100% local">
+</p>
+
+<p align="center">
+  <a href="#quick-start">Quick Start</a> |
+  <a href="#see-what-you-can-make">Examples</a> |
+  <a href="https://www.topview.ai/academy/spatial-control#3-1-3d-builder-build-scenes-stage-action-and-move-the-camera">Tutorial</a> |
+  <a href="https://www.topview.ai/3d-builder">3D Builder</a> |
+  <a href="https://www.topview.ai">Topview.ai</a> |
+  <a href="https://github.com/topviewai/topview-3d-builder/issues">Issues</a>
+</p>
 
 https://github.com/user-attachments/assets/5b07a0d4-d3cc-48c0-aebf-31e2232d90de
 
-<p align="center"><sub>↑ 在 Studio 里搭场景、摆机位、拉运镜，再到成片，一气呵成</sub></p>
+<p align="center"><sub>Build the scene, place the cameras, plan the camera move in Studio, then get the shot.</sub></p>
 
-## 🚀 快速上手
+## Quick Start
 
-### 第 1 步：安装插件
+Works with **ChatGPT / Codex**, **Cursor** and **Claude Code**. You need Python 3.11+, Node.js 20.6+, and either [uv](https://docs.astral.sh/uv/) or pipx.
 
-选择你正在用的 AI 工具。需要 Python 3.11+、Node.js 20.6+，以及 [uv](https://docs.astral.sh/uv/) 或 pipx（任选其一）。
+**1. Send this to your agent**
 
-ChatGPT / Codex · Cursor · Claude Code
+```text
+Install the Topview 3D Builder plugin from https://github.com/topviewai/topview-3d-builder for the agent I'm using (ChatGPT / Codex, Cursor or Claude Code). Follow the install steps in the README, then tell me when to restart.
+```
 
-#### ChatGPT / Codex
+<details>
+<summary>What your agent will run</summary>
 
-ChatGPT 桌面端与 Codex 共用同一份配置，装一次即可，安装后重启应用。
+**ChatGPT / Codex** (the ChatGPT desktop app shares Codex's configuration; restart the app afterwards)
 
 ```bash
 codex plugin marketplace add https://github.com/topviewai/topview-3d-builder.git --ref main
 codex plugin add topview-3d-builder@topview-3d-builder
 ```
 
-#### Cursor
+**Cursor** (restart Cursor afterwards)
 
 ```bash
 git clone https://github.com/topviewai/topview-3d-builder.git ~/.cursor/plugins/local/topview-3d-builder
 ```
 
-重启 Cursor 生效。
-
-#### Claude Code
+**Claude Code** (restart Claude Code afterwards)
 
 ```bash
 claude plugin marketplace add https://github.com/topviewai/topview-3d-builder.git
 claude plugin install topview-3d-builder@topview-3d-builder
 ```
 
-安装后重启 Claude Code。
-
-<details>
-<summary>其他支持 Skills 的工具</summary>
+**Any other agent with skills support**
 
 ```bash
 npx skills add https://github.com/topviewai/topview-3d-builder.git
 ```
 
-然后选择 `topview-3d-cli`。
+Then pick `topview-3d-cli`. The first render downloads a browser component once; after that it is cached. For updates, uninstalling and manual setup, see the [developer docs](DEVELOPER.md).
 
 </details>
 
-> 首次渲染会自动下载一次渲染所需的浏览器组件（约几百 MB），之后无需重复下载。
-> 更新、卸载、手动安装 CLI 等进阶操作，请见 [开发者与进阶文档](DEVELOPER.md)。
+**2. Start a new session and describe the scene you want**
 
-### 第 2 步：开一个新会话，直接说你想要的场景
+> Build a scene: a character sits next to a box. Render a front view.
 
-> "搭一个场景：一个角色坐在盒子旁边，渲染一张正面视角。"
+**3. Review the scene and keep refining**
 
-### 第 3 步：查看场景，继续调整
+Keep talking to your agent, or open Studio and adjust by hand. When you're happy, turn the 3D scene into a real animated video.
 
-需要调整就继续说，或者打开 Studio 手动微调。满意之后，以这个 3D 场景为依据，输出真实质感的动画视频。
+## The problem
 
-## 你是不是也遇到过这些问题？
+AI video is great until you try to direct it. With text alone, space is hard to describe:
 
-用 AI 生成视频，最让创作者崩溃的往往不是画质，而是**"它根本不听我的"**：
+- 😵 **Blocking is a guess.** "Two people facing each other across a table" comes back side by side, clipping, or without the table.
+- 🎰 **Camera angles are a lottery.** Reverse shots, over-the-shoulder, top-down: you write a paragraph and get one random angle.
+- 🔁 **One tweak, full redo.** Move a character half a step and everything changes on regenerate.
+- 💸 **Retries burn credits.** A usable shot can take a dozen attempts.
+- 🧩 **Shots don't match.** In one scene, character positions and space contradict each other from shot to shot.
+- 📐 **Not everyone can storyboard.** No art skills means no way to show the staging in your head.
 
-| 创作者的痛点 | 具体表现 |
-| --- | --- |
-| 😵 **站位全靠猜** | 想要"两人面对面坐在桌子两侧"，生成出来却是并排、穿模、或者桌子消失了 |
-| 🎰 **镜头像抽卡** | 反打、过肩、俯拍……提示词写了一大段，AI 只给你一个随机角度 |
-| 🔁 **改一点，全盘重来** | 只想让角色往左挪半步，重新生成后，人物、场景、构图全变了 |
-| 💸 **试错成本高** | 每次生成都在烧积分和时间，一个镜头抽十几次才勉强能用 |
-| 🧩 **多镜头对不上** | 同一场戏的几个镜头里，人物位置和空间关系前后矛盾，剪不到一起 |
-| 📐 **不会画分镜** | 没有美术功底，没法用画面把脑子里的调度表达清楚 |
+## The idea
 
-**根源在于：只用文字，很难把"空间"说清楚。**
+> **Turn space you can't describe into a 3D scene you can see, then into a real video.**
 
-## Topview 3D Builder 做什么
+Topview 3D Builder covers the whole path from **an idea, to a 3D scene, to a real video**:
 
-> **把"说不清的空间"，变成"看得见的 3D 场景"，再变成"真实的视频"。**
-
-它打通了**从一个想法，到 3D 场景，再到真实视频**的完整创作流程：
-
-1. **想法 → 3D 场景：** 你只需要说出脑海里的画面，AI 自动帮你搭好场景：谁站哪、朝哪看、拿什么、镜头从哪个角度拍。
-2. **3D 场景 → 调度图：** 3D 场景是**导演的调度图**，把"站位、比例、镜头"这些最容易被 AI 搞错的东西提前定死。
-3. **调度图 → 真实视频：** 以 3D 场景为依据，渲染成**真实质感的动画视频**。画面质感、光影、表演由视频模型发挥，调度完全按你的设计走。
+1. **Idea → 3D scene.** Say the picture in your head. Your agent builds it: who stands where, who faces what, what they hold, and where the camera sits.
+2. **3D scene → locked staging.** Blocking, scale and camera angles, the things AI gets wrong most often, are fixed before generation.
+3. **3D scene → real video.** The scene guides generation into an animated video with real-world look and feel. Texture, lighting and performance come from the video model; the staging is yours.
 
 ```
-一个想法  →  AI 搭好 3D 场景  →  自动检查并微调  →  多机位渲染  →  输出真实的动画视频
+An idea  →  Agent builds the 3D scene  →  Auto-check and refine  →  Multi-camera render  →  Real animated video
 ```
 
-## 你会得到什么
+## What you get
 
-### 🎬 导演式掌控，而不是抽卡
-人物站位、朝向、坐姿、道具摆放、镜头角度，都由你决定。同一个场景可以输出多个机位，**人物和空间在所有镜头里保持一致**。
+- 🎬 **Direct, don't gamble.** You decide blocking, facing, poses, props and cameras. Render several cameras from one scene and the **characters and space stay consistent across every shot**.
+- 🎥 **Design the camera move in advance.** Plan push-ins, pull-backs, rises, orbits and cuts on a timeline. Stretch or shorten a move and the clips after it shift automatically.
+- 💬 **Just describe it.** No 3D software to learn. Ask in plain language, for example: *"Two people sit across a table, a woman is talking. Give me a front, an over-the-shoulder and a top-down shot."*
+- ✅ **Checked before you generate.** Floating or clipping characters, spacing, framing and composition are measured automatically, so problems are caught before they cost you credits.
+- ✏️ **Edit one thing, keep the rest.** Scenes are saved as projects. Move a character, change a pose or add a camera without starting over, or drag things around in the built-in Studio.
+- 🔒 **Local by default.** Building and rendering run on your machine, with no account and no upload.
 
-### 🎥 运镜也能提前设计
-在时间轴上规划镜头的推、拉、升、环绕和切镜，拉长或缩短时长，后面的片段会自动顺延。**镜头怎么走，成片就怎么拍。**
+## See what you can make
 
-### 💬 说人话就能搭
-不用学 3D 软件。在 ChatGPT、Cursor、Claude Code 里直接说：
-
-> "帮我搭一个场景：两个人隔着桌子对坐，一个女人正在说话，给我正面、过肩和俯视三个镜头。"
-
-### ✅ 生成视频之前先自动"质检"
-系统会自动检查人物有没有悬空或穿模、彼此距离是否合理、人物是否在镜头里、构图是否合适。**问题在生成视频之前就被发现**，省下反复重试的积分。
-
-### ✏️ 随时可改，改一处不动其他
-场景以项目形式保存，下次打开接着改。想让人物挪半步、换个坐姿、加一台机位，**只改你要改的那一处**，不用整个推倒重来。你也可以在内置可视化编辑器（Studio）里亲手拖拽调整。
-
-### 🔒 本地运行，素材不上传
-搭建和渲染都在你自己的电脑上完成，**无需账号，不上传任何内容**。
-
-## 看看能做出什么
-
-左边是你搭的 3D 调度，右边是据此生成的视频镜头：**3D 里怎么摆，成片就怎么拍。**
+Left is the 3D scene you build. Right is the video generated from it: **the way you stage it in 3D is the way it gets shot.**
 
 <table>
   <tr>
-    <th width="50%" align="center">3D 调度</th>
-    <th width="50%" align="center">生成的视频</th>
+    <th width="50%" align="center">3D scene</th>
+    <th width="50%" align="center">Generated video</th>
   </tr>
   <tr>
     <td align="center"><video src="https://github.com/user-attachments/assets/f304c401-a009-470c-ba7b-1fba10ea3a14" width="100%" controls muted playsinline></video></td>
     <td align="center"><video src="https://github.com/user-attachments/assets/3365923a-a8b4-4c78-aeaa-2d32b6c22320" width="100%" controls muted playsinline></video></td>
   </tr>
   <tr>
-    <td colspan="2"><b>🐉 空镜 · 跟随飞行：</b>骑士驾驭巨龙飞越城堡。镜头从骑士身后偏上的位置出发，越过龙翼望向塔楼，8 秒内跟随飞行，随巨龙掠过城堡、飞向远方山丘。</td>
+    <td colspan="2"><b>🐉 Establishing shot, follow the flight:</b> A rider flies a dragon over a castle. The camera starts just behind and above them, looking forward over the wings at the towers. Over eight seconds it follows the flight as the dragon clears the castle and heads out over the hills.</td>
   </tr>
   <tr>
     <td align="center"><video src="https://github.com/user-attachments/assets/5a12c45a-a5d0-4fe8-a5d9-40689fd62988" width="100%" controls muted playsinline></video></td>
     <td align="center"><video src="https://github.com/user-attachments/assets/d20f2c9a-8fc2-45c7-b7cc-249a4a6b1e8c" width="100%" controls muted playsinline></video></td>
   </tr>
   <tr>
-    <td colspan="2"><b>☕ 产品 · 推近升镜：</b>咖啡店吧台，一个人把壶里的饮品倒进杯中。镜头从吧台对面的全景开始，8 秒内推近并升高，最终切到俯拍倒水的特写。</td>
+    <td colspan="2"><b>☕ Product shot, push in and rise:</b> One person pours from a pitcher into a cup on a café counter. The camera starts wide across the counter, then pushes in and rises to a top-down close-up of the pour over eight seconds.</td>
   </tr>
   <tr>
     <td align="center"><video src="https://github.com/user-attachments/assets/a49d606b-b480-4846-a60c-59044c93c1f7" width="100%" controls muted playsinline></video></td>
     <td align="center"><video src="https://github.com/user-attachments/assets/6a3afbde-32f2-4274-8f25-c7f8b93bcca5" width="100%" controls muted playsinline></video></td>
   </tr>
   <tr>
-    <td colspan="2"><b>🏀 运动 · 起跳投篮：</b>球员起跳投篮。镜头从球员身旁的低位出发，8 秒内升高并推向篮筐，最后停在篮筐上方俯视。</td>
+    <td colspan="2"><b>🏀 Sports, jump shot:</b> A player jumps and shoots at a hoop. The camera starts low beside them, then rises and pushes in toward the basket, finishing above the rim and looking down over eight seconds.</td>
+  </tr>
+</table>
+
+<details>
+<summary>More: street tracking shot</summary>
+
+<table>
+  <tr>
+    <th width="50%" align="center">3D scene</th>
+    <th width="50%" align="center">Generated video</th>
   </tr>
   <tr>
     <td align="center"><video src="https://github.com/user-attachments/assets/3616a492-1961-4760-ab3e-259c603b292c" width="100%" controls muted playsinline></video></td>
     <td align="center"><video src="https://github.com/user-attachments/assets/8db00ea9-9b6b-414e-a76b-9b92761504f6" width="100%" controls muted playsinline></video></td>
   </tr>
   <tr>
-    <td colspan="2"><b>🚴 街景 · 跟拍拉升：</b>一个人沿城市街道骑行。镜头从平视角度并行跟拍，8 秒内升高并后拉，最终以高角度俯瞰整条街道。</td>
+    <td colspan="2"><b>🚴 Street, tracking shot:</b> A person rides a bicycle along a city street. The camera starts level and tracks alongside, then rises and pulls back to a high angle looking down the street over eight seconds.</td>
   </tr>
 </table>
 
-### 更多可以直接试的提示词
+</details>
 
-> 搭一个小咖啡馆：两个人隔着桌子对坐。镜头放在窗外，用 4 秒缓缓推近。渲染首帧、中间帧和末帧。
+### More prompts to try
 
-> 一位女士站在白色影棚里，摆出"行走"姿势。给我三个机位：正面、四分之三侧面、低角度，三个都渲染出来。
+> Build a small café. Two people sit across a table from each other. Put the camera outside the window and slowly push in over four seconds. Render the first, middle and last frame.
 
-> 在空旷的街道中央放一辆车，镜头用 5 秒绕车环绕 90 度。
+> A woman stands in a white studio holding a pose from the "walking" set. Three cameras: front, three-quarter, and a low angle. Render all three.
 
-> 基于我现在的场景，在主角身后再加一个机位，播放到一半时切过去。
+> Put a car in the middle of an empty street. Orbit the camera 90 degrees around it over five seconds.
 
-## 内置素材，开箱即用
+> Take my current scene, add a second camera behind the main character, and cut to it halfway through.
 
-| 素材 | 数量 | 说明 |
+## Built-in assets
+
+Ready to use out of the box.
+
+| Asset | Count | Notes |
 | --- | --- | --- |
-| 👤 角色 | 4 个 | 儿童、青年、女性、男性 |
-| 🧍 姿势 | 121 种 | 坐、站、行走、对打、爬行、伸手…… |
-| 📦 道具 | 基础几何体 | 用方块、柱体等快速搭出桌椅、墙体、物件 |
-| 🎥 镜头 | 自由添加 | 叙事镜头 + 全景俯视机位，方便一眼看清全场调度 |
+| 👤 Characters | 4 | Child, youth, woman, man |
+| 🧍 Poses | 121 | Sitting, standing, walking, fighting, crawling, reaching and more |
+| 📦 Props | Primitives | Boxes, cylinders and more, for quickly building tables, walls and objects |
+| 🎥 Cameras | As many as you need | Story cameras plus a bird's-eye overview to see the whole staging at a glance |
 
-> 素材由 Topview 制作，采用 CC BY 4.0 协议，可自由使用。
+Built-in assets are made by Topview and licensed under CC BY 4.0.
 
-## 适合谁
+## Who it's for
 
-- **AI 短剧 / 短视频创作者**：让多镜头之间人物位置不"穿帮"，提高成片率
-- **广告 / 品牌内容团队**：先在内部对齐调度和镜头，再投入生成成本
-- **独立导演 / 分镜师**：不会画画，也能快速出分镜参考
-- **电商 / 营销运营**：批量产出人物与产品关系稳定的场景素材
-- **教育、动画、游戏预演**：快速验证一场戏该怎么拍
+- **AI short-drama and short-video creators.** Keep character positions consistent across shots and get more usable footage per generation.
+- **Ad, brand and e-commerce content teams.** Agree on staging and camera work before you spend generation credits, and keep people and products in a stable relationship across shots.
 
+Directors, storyboard artists and anyone previsualizing a scene can use it too.
 
-## 目前能做什么，不能做什么
+## FAQ
 
-我们希望你对产品有清晰的预期：
+**Do I need any 3D modeling skills?**
+No. Describe what you want in plain language. Your agent builds, checks and renders the scene.
 
-| ✅ 擅长 | ⚠️ 暂不支持 |
+**Is it free? Do I need an account?**
+Building, editing and rendering are free and need no account.
+
+**Is my content uploaded?**
+No. Every project stays in a `.topview-3d/` folder on your machine.
+
+**Can it generate video?**
+Yes. It covers the whole path from an idea, to a 3D scene, to a real animated video: you lock the staging first, then generate the video from that 3D scene.
+
+## Learn more and join in
+
+| | |
 | --- | --- |
-| 人物站位、朝向、坐立等**静态姿势** | 行走、跑步等**连续身体动画**（可用"行走姿势"静帧 + 位移关键帧表达走位） |
-| 抽象、比例正确的场景调度 | 精细的场景与道具细节、写实质感 |
-| 多机位、全景俯视、构图检查 | 自定义角色形象（目前使用 4 个内置人偶角色） |
+| 🌐 **Topview.ai** | [www.topview.ai](https://www.topview.ai) |
+| 🎬 **3D Builder home** | [www.topview.ai/3d-builder](https://www.topview.ai/3d-builder) |
+| 🎓 **3D Builder tutorial** | [Build scenes, stage action and move the camera](https://www.topview.ai/academy/spatial-control#3-1-3d-builder-build-scenes-stage-action-and-move-the-camera) |
+| 🛠 **Developer docs** | [DEVELOPER.md](DEVELOPER.md) (CLI, project format, releases, contributing) |
+| 🐞 **Feedback and bugs** | [GitHub Issues](https://github.com/topviewai/topview-3d-builder/issues) |
 
-> 3D 场景是"画面骨架"，用来约束视频模型的调度，最终的真实质感由视频生成阶段完成。
+If Topview 3D Builder helps your work, **give the repo a ⭐** and share what you make. We'd love to see it.
 
+## License
 
-## 常见问题
-
-**需要 3D 建模基础吗？**
-不需要。用自然语言描述即可，系统会自动完成搭建、检查和渲染。
-
-**需要付费或注册吗？**
-搭建、编辑、渲染全部免费，且无需账号。
-
-**我的内容会被上传吗？**
-不会。所有项目都保存在你本机的 `.topview-3d/` 文件夹中。
-
-**它能直接生成视频吗？**
-能。它覆盖从想法到 3D 场景，再到真实动画视频的完整流程：先把调度搭好，再以 3D 场景为依据输出视频。
-
-## 了解更多
-
-- 🌐 产品主页：[topview.ai/3d-builder](https://www.topview.ai/3d-builder)
-- 🛠 开发者与进阶文档（CLI、项目格式、版本发布、贡献指南）：[DEVELOPER.md](DEVELOPER.md)
-- 🐞 问题反馈：[GitHub Issues](https://github.com/topviewai/topview-3d-builder/issues)
-
-## 许可
-
-- 代码、Schema 与文档：[Apache License 2.0](LICENSE)
-- 内置素材（角色、姿势等）：[CC BY 4.0](builtin-assets/LICENSE)，署名："Scene3D built-in assets © Topview, CC BY 4.0"
+- Code, schemas and docs: [Apache License 2.0](https://github.com/topviewai/topview-3d-builder/blob/main/LICENSE)
+- Built-in assets (characters, poses and more): [CC BY 4.0](https://github.com/topviewai/topview-3d-builder/blob/main/builtin-assets/LICENSE). Credit them as "Scene3D built-in assets © Topview, CC BY 4.0".
