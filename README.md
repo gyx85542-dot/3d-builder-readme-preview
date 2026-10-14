@@ -81,41 +81,38 @@ Then pick `topview-3d-cli`. The first render downloads a browser component once;
 
 Keep talking to your agent, or open Studio and adjust by hand. When you're happy, turn the 3D scene into a real animated video.
 
-## Why directing AI video feels like gambling
-
-If you make AI videos, you've probably hit this. Text prompts can't describe space precisely, so you can't control where people stand or where the camera goes:
-
-- 😵 **Blocking is a guess.** "Two people facing each other across a table" comes back side by side, clipping, or without the table.
-- 🎰 **Camera angles are a lottery.** Reverse shots, over-the-shoulder, top-down: you write a paragraph and get one random angle.
-- 🔁 **One tweak, full redo.** Move a character half a step and everything changes on regenerate.
-- 💸 **Retries burn credits.** A usable shot can take a dozen attempts.
-- 🧩 **Shots don't match.** In one scene, character positions and space contradict each other from shot to shot.
-- 📐 **Not everyone can storyboard.** No art skills means no way to show the staging in your head.
-
 ## What is Topview 3D Builder?
 
-> **Turn space you can't describe into a 3D scene you can see, then into a real video.**
+Topview 3D Builder is a **3D director's stage for AI video**. You describe the scene, and your agent builds it in 3D: who stands where, who faces what, what they hold, and where the camera sits. That 3D scene then guides the video model, so the staging comes from you instead of from luck.
 
-Topview 3D Builder covers the whole path from **an idea, to a 3D scene, to a real video**:
-
-1. **Idea → 3D scene.** Say the picture in your head. Your agent builds it: who stands where, who faces what, what they hold, and where the camera sits.
-2. **3D scene → locked staging.** Blocking, scale and camera angles, the things AI gets wrong most often, are fixed before generation.
-3. **3D scene → real video.** The scene guides generation into an animated video with real-world look and feel. Texture, lighting and performance come from the video model; the staging is yours.
+It covers the whole path from **an idea, to a 3D scene, to a real animated video**. The 3D scene fixes blocking, scale and camera angles. Texture, lighting and performance come from the video model.
 
 ```
 An idea  →  Agent builds the 3D scene  →  Auto-check and refine  →  Multi-camera render  →  Real animated video
 ```
 
-## What creators get
+Everything before the video runs on your machine, free, with no account and no upload.
 
-- 🎬 **Direct, don't gamble.** You decide blocking, facing, poses, props and cameras. Render several cameras from one scene and the **characters and space stay consistent across every shot**.
-- 🎥 **Design the camera move in advance.** Plan push-ins, pull-backs, rises, orbits and cuts on a timeline. Stretch or shorten a move and the clips after it shift automatically.
-- 💬 **Just describe it.** No 3D software to learn. Ask in plain language, for example: *"Two people sit across a table, a woman is talking. Give me a front, an over-the-shoulder and a top-down shot."*
-- ✅ **Checked before you generate.** Floating or clipping characters, spacing, framing and composition are measured automatically, so problems are caught before they cost you credits.
-- ✏️ **Edit one thing, keep the rest.** Scenes are saved as projects. Move a character, change a pose or add a camera without starting over, or drag things around in the built-in Studio.
-- 🔒 **Local by default.** Building and rendering run on your machine, with no account and no upload.
+## What problem does it solve?
 
-## See what you can make
+If you make AI videos, you've probably hit this: text prompts can't describe space precisely, so you can't control where people stand or where the camera goes. Directing AI video ends up feeling like gambling. 3D Builder gives you control back.
+
+| The problem | How 3D Builder solves it |
+| --- | --- |
+| 😵 **Blocking is a guess.** "Two people facing each other across a table" comes back side by side, clipping, or without the table. | 🎬 **Direct, don't gamble.** You place characters, poses, props and cameras, so blocking and facing are decided, not guessed. |
+| 🎰 **Camera angles are a lottery.** You write a paragraph and get one random angle. | 🎥 **Design the camera move in advance.** Plan push-ins, pull-backs, rises, orbits and cuts on a timeline. |
+| 🔁 **One tweak, full redo.** Move a character half a step and everything changes on regenerate. | ✏️ **Edit one thing, keep the rest.** The scene is a saved project. Move a character, change a pose or add a camera without starting over. |
+| 💸 **Retries burn credits.** A usable shot can take a dozen attempts. | ✅ **Checked before you generate.** Floating or clipping characters, spacing and framing are measured automatically, so problems are caught early. |
+| 🧩 **Shots don't match.** Character positions and space contradict each other from shot to shot. | 🎬 **One scene, many cameras.** Render several cameras from the same scene and characters and space stay consistent in every shot. |
+| 📐 **Not everyone can storyboard.** No art skills means no way to show the staging in your head. | 💬 **Just describe it.** No 3D software to learn. Ask in plain language and your agent builds the scene. |
+
+## How it works
+
+1. **Describe the shot.** Tell your agent the scene you want, for example: *"Two people sit across a table, a woman is talking. Give me a front, an over-the-shoulder and a top-down shot."*
+2. **The agent builds the 3D scene.** It uses built-in characters, poses and props, and places the cameras.
+3. **Check and refine.** The scene is measured automatically. Keep talking to your agent, or open Studio and drag things around.
+4. **Render and generate.** Render the cameras, plan the camera moves, then turn the 3D scene into a real animated video.
+### Example
 
 Left is the 3D scene you build. Right is the video generated from it: **the way you stage it in 3D is the way it gets shot.**
 
